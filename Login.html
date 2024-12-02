@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse Writers</title>
+    <link rel="stylesheet" href="writer-dashboard.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="path_to_your_logo.png" alt="Logo" class="logo">
+            <h1>Eclipse Writers</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" data-page="home-page">Home</a></li>
+                <li><a href="#" data-page="writers-page">Our Writers</a></li>
+                <li><a href="#" data-page="editorial-page">Our Editorial Services</a></li>
+                <li><a href="#" class="login-btn" onclick="showSignUpForm()">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="fixed-message">
+    <div class="welcome-message">
+        <h2>Welcome to Eclipse Writers</h2>
+    </div>
+    </div>
+
+    <div id="home-page" class="page-content">
+        <p>Your home for quality writing and editing services.</p>
+    </div>
+
+    <div id="writers-page" class="page-content" style="display: none;">
+        <h2>Our Writers</h2>
+        <p><i class="fas fa-user-graduate"></i> We train all our writers and provide refresher training for individuals with writing experience before onboarding them. Writers who fail our tests are barred from this website. With this, employers can hire the best talent. Alongside this, we have editors who check every paper before employers can download them to bolster the quality.</p>
+    </div>
+
+    <div id="editorial-page" class="page-content" style="display: none;">
+        <h2>Our Editorial Services</h2>
+        <p><i class="fas fa-edit"></i> We are the guys you have been looking for. At a time when quality crises in the writing industry have arisen, we have come to decapitate bad quality by providing great writers and imperative editorial services to all employers. With us, both writers and employers have the best experience and rewards.</p>
+    </div>
+
+    <div class="blob"></div>
+    <div class="wrapper">
+        <form id="loginForm" action="dashboard.html" method="post">
+            <h2>Login</h2>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit">Login</button>
+            <div class="register-link">
+                <p>Don't have an account?<a href="#" onclick="toggleForm()">Sign Up</a></p>
+            </div>
+        </form>
+        
+        <form id="registerForm" action="" style="display: none;">
+            <h2>Sign Up</h2>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person"></ion-icon></span>
+                <input type="text" required>
+                <label>Name</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="user-type">
+                <label><input type="radio" name="user-type" value="writer"> Writer</label>
+                <label><input type="radio" name="user-type" value="employer"> Employer</label>
+            </div>
+            <button type="submit">Register</button>
+            <div class="register-link">
+                <p>Already have an account?<a href="#" onclick="toggleForm()">Login</a></p>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

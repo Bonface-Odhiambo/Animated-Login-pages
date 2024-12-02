@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse Writers - Academic Writing Platform</title>
+    <link rel="stylesheet" href="test.css">
+    <script src="test.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="path_to_your_logo.png" alt="Eclipse Writers Logo" class="logo">
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#why-choose-us">Why Choose Us</a></li>
+                <li><a href="#get-started">Get Started</a></li>
+                <li><a href="#browse-hire">Browse & Hire</a></li>
+            </ul>
+        </nav>
+        <div class="notification-icon">
+            <i class="fas fa-bell"></i>
+            <span class="notification-count">0</span>
+        </div>
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Eclipse Writers</h2>
+            <p>Your premier platform for exceptional academic writing services.</p>
+            <div class="statistics">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <h3>5000+</h3>
+                    <p>Qualified Writers</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>50,000+</h3>
+                    <p>Completed Orders</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <h3>4.9/5</h3>
+                    <p>Average Rating</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-us">
+            <h2>About Us</h2>
+            <p>Eclipse Writers is a platform where writers have been overtly tested. Writers who failed Eclipse tests were disallowed on this platform.</p>
+        </section>
+
+        <section id="why-choose-us">
+            <h2>Why Choose Us</h2>
+            <ul>
+                <li>All our writers have been tested for exceptional writing.</li>
+                <li>Writers who fail the tests are barred from our site.</li>
+                <li>Get free AI and plagiarism reports at the click of a button.</li>
+                <li>All papers are edited at 3% on the order cost by our validated editors.</li>
+            </ul>
+        </section>
+
+        <section id="get-started">
+            <h2>Get Started</h2>
+            <div class="auth-container">
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                        <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                    </div>
+                    <form id="login" class="input-group">
+                        <select class="input-field" required>
+                            <option value="" disabled selected>Select User Type</option>
+                            <option value="writer">Writer</option>
+                            <option value="employer">Employer</option>
+                        </select>
+                        <input type="text" class="input-field" placeholder="User Id" required>
+                        <input type="password" class="input-field" placeholder="Enter Password" required>
+                        <input type="checkbox" class="check-box"><span>Remember Password</span>
+                        <button type="submit" class="submit-btn">Log in</button>
+                    </form>
+                    <form id="register" class="input-group">
+                        <select class="input-field" required>
+                            <option value="" disabled selected>Select User Type</option>
+                            <option value="writer">Writer</option>
+                            <option value="employer">Employer</option>
+                        </select>
+                        <input type="text" class="input-field" placeholder="User Id" required>
+                        <input type="email" class="input-field" placeholder="Email Id" required>
+                        <input type="password" class="input-field" placeholder="Enter Password" required>
+                        <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                        <button type="submit" class="submit-btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="browse-hire">
+            <h2>Browse and Hire</h2>
+            <p>Explore our pool of talented writers and find the perfect match for your project.</p>
+            <!-- Add a writer search or browsing functionality here -->
+        </section>
+
+        <section id="writer-info">
+            <h2>For Writers</h2>
+            <p>Are you a writer? Take our tests and start bidding on orders on the site. We test our writers and provide editors on site to help them bolster their writing capabilities. With us, you can be sure your capabilities will be edged out accordingly.</p>
+        </section>
+
+        <section id="employer-info">
+            <h2>For Employers</h2>
+            <p>Sign up and enjoy the impeccable and uncompromised paper quality provided by our writers in collaboration with our editors. Eclipse Writers edits all papers delivered by writers to ensure all employers experience no "quality headache". On this site, every paper is ready to be given to clients.</p>
+        </section>
+    </main>
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <div class="chat-widget">
+        <div class="chat-header">
+            <h3>Eclipse Chat</h3>
+            <button class="minimize-chat"><i class="fas fa-minus"></i></button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages"></div>
+            <form class="chat-input">
+                <input type="text" placeholder="Type a message...">
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <a href="https://wa.me/254716212152" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>Eclipse Writers is a handy tool for helping employers get outstanding and exceptional writers. Our editors help revamp paper quality to the benefit of both writers and employers.</p>
+        <p>&copy; 2024 Eclipse Writers. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

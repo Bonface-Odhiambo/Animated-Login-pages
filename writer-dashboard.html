@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse Writers Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard-style.css">
+    <script src="dashboard.js"></script>
+</head>
+<body>
+    <div class="blob"></div>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="logo">Eclipse Writers</h2>
+                <div class="menu-icon">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active"><i class="fa fa-home"></i> Dashboard</a></li>
+                    <li><a href="#"><i class="fa fa-tasks"></i> Orders</a></li>
+                    <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fa fa-envelope"></i> Messages</a></li>
+                    <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                    <li><a href="#"><i class="fa fa-star"></i> Rating</a></li>
+                    <li><a href="#"><i class="fa fa-comments"></i> General chat</a></li>
+                    <li><a href="#"><i class="fa fa-exclamation-triangle"></i> Disputes</a></li>
+                    <li><a href="#"><i class="fa fa-ban"></i> Canceled Orders</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-content">
+                    <div class="user-info">
+                        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+                        <h2>Welcome Back, <span id="user-name">User</span></h2>
+                        <span class="writer-status status-public">Public</span>
+                    </div>
+                    <div class="quick-actions">
+                        <button id="wallet-btn"><i class="fa fa-wallet"></i> Wallet: Ksh.1000</button>
+                        <button id="notifications-btn"><i class="fa fa-bell"></i> Notifications</button>
+                        <button id="logout-btn"><i class="fa fa-sign-out-alt"></i> Logout</button>
+                    </div>
+                </div>
+            </header>
+            <section class="dashboard-cards">
+                <div class="card">
+                    <h3>Active Orders</h3>
+                    <p id="active-orders">5</p>
+                </div>
+                <div class="card">
+                    <h3>Completed Orders</h3>
+                    <p id="completed-orders">28</p>
+                </div>
+                <div class="card">
+                    <h3>Earnings</h3>
+                    <p id="earnings">Ksh.1,250</p>
+                </div>
+                <div class="card">
+                    <h3>Rating</h3>
+                    <p id="rating">4.9</p>
+                </div>
+            </section>
+            <section class="recent-activity">
+                <h3>Recent Activity</h3>
+                <ul class="activity-list">
+                    <li class="activity-item">
+                        <div class="activity-icon"><i class="fa fa-check"></i></div>
+                        <div class="activity-details">
+                            <p>Order #1234 completed</p>
+                            <small>2 hours ago</small>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon"><i class="fa fa-plus"></i></div>
+                        <div class="activity-details">
+                            <p>New order #5678 received</p>
+                            <small>5 hours ago</small>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon"><i class="fa fa-star"></i></div>
+                        <div class="activity-details">
+                            <p>Received a 5-star rating</p>
+                            <small>1 day ago</small>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="real-time-stats">
+                <h3>Eclipse Stats for You</h3>
+                <div id="writer-stats" class="stats-container">
+                    <div class="stat-item">
+                        <h4>Available Orders</h4>
+                        <p id="available-orders">Loading...</p>
+                    </div>
+                </div>
+                <div id="employer-stats" class="stats-container">
+                    <div class="stat-item">
+                        <h4>Writers Online</h4>
+                        <p id="online-writers">Loading...</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>Posted Orders</h4>
+                        <p id="posted-orders">Loading...</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>Your Earnings</h4>
+                        <p id="remitted-funds">Loading...</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>Writers Offline</h4>
+                        <p id="offline-writers">Loading...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-whatsapp"></i></a>
+            <a href="#"><i class="fa fa-discord"></i></a>
+        </div>
+        <p>&copy; 2024 Eclipse Writers. All rights reserved.</p>
+    </footer>
+</body>
+</html>

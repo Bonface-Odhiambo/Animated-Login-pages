@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eclipse Writers Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="employer-dashboard.css">
+    <script src="employer-dashboard.js"></script>
+</head>
+<body>
+    <div class="blob"></div>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="logo">Eclipse Writers</h2>
+                <div class="menu-icon">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active"><i class="fa fa-home"></i> Dashboard</a></li>
+                    <li class="employer-only"><a href="#"><i class="fa fa-pencil"></i> Post Order</a></li>
+                    <li class="writer-only"><a href="#"><i class="fa fa-list"></i> Available Orders</a></li>
+                    <li class="employer-only"><a href="#"><i class="fa fa-users"></i> Writers</a></li>
+                    <li class="writer-only"><a href="#"><i class="fa fa-briefcase"></i> Employers</a></li>
+                    <li><a href="#"><i class="fa fa-tasks"></i> My Orders</a></li>
+                    <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fa fa-envelope"></i> Messages</a></li>
+                    <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                    <li class="writer-only"><a href="#"><i class="fa fa-star"></i> Rating</a></li>
+                    <li><a href="#"><i class="fa fa-comments"></i> General chat</a></li>
+                    <li><a href="#"><i class="fa fa-exclamation-triangle"></i> Disputes</a></li>
+                    <li><a href="#"><i class="fa fa-ban"></i> Canceled Orders</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="header-content">
+                    <div class="user-info">
+                        <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+                        <h2>Welcome, <span id="user-name">User</span></h2>
+                        <span id="user-role" class="user-role">Role</span>
+                    </div>
+                    <div class="quick-actions">
+                        <button id="wallet-btn"><i class="fa fa-wallet"></i> Wallet: Ksh<span id="wallet-amount">0</span></button>
+                        <button id="notifications-btn"><i class="fa fa-bell"></i> Notifications</button>
+                        <button id="logout-btn"><i class="fa fa-sign-out-alt"></i> Logout</button>
+                    </div>
+                </div>
+            </header>
+            <section class="dashboard-summary">
+                <div class="summary-card">
+                    <h3>Active Orders</h3>
+                    <p id="active-orders">0</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Completed Orders</h3>
+                    <p id="completed-orders">0</p>
+                </div>
+                <div class="summary-card employer-only">
+                    <h3>Total Spent</h3>
+                    <p id="total-spent">Ksh0</p>
+                </div>
+                <div class="summary-card writer-only">
+                    <h3>Earnings</h3>
+                    <p id="earnings">Ksh 0</p>
+                </div>
+                <div class="summary-card">
+                    <h3 id="rating-title">Rating</h3>
+                    <p id="rating">0.0</p>
+                </div>
+            </section>
+            <section class="available-orders writer-only">
+                <h3>Available Orders</h3>
+                <p>Available Orders: <span id="available-orders">0</span></p>
+            </section>
+            <section class="real-time-stats">
+                <h3>Eclipse Real-Time Statistics</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h4>Online Writers</h4>
+                        <p id="online-writers">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>Offline Writers</h4>
+                        <p id="offline-writers">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>Posted Orders</h4>
+                        <p id="posted-orders">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>Pending Orders</h4>
+                        <p id="pending-orders">0</p>
+                    </div>
+                </div>
+            </section>
+            <section class="writers-list employer-only">
+                <h3>Available Writers</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Rating</th>
+                            <th>Completed Orders</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="writers-table-body"></tbody>
+                </table>
+            </section>
+            <section class="employers-list writer-only">
+                <h3>Top Employers</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Rating</th>
+                            <th>Posted Orders</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employers-table-body"></tbody>
+                </table>
+            </section>
+            <section class="orders-list">
+                <h3 id="orders-title">My Orders</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Title</th>
+                            <th id="order-party-header">Writer/Employer</th>
+                            <th>Deadline</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-table-body"></tbody>
+                </table>
+            </section>
+            <section class="recent-activity">
+                <h3>Recent Activity</h3>
+                <ul class="activity-list" id="activity-list"></ul>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-whatsapp"></i></a>
+            <a href="#"><i class="fa fa-discord"></i></a>
+        </div>
+        <p>&copy; 2024 Eclipse Writers. All rights reserved.</p>
+    </footer>
+</body>
+</html>
